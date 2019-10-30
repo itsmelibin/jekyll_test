@@ -23,7 +23,7 @@ The Maps API for JavaScript was refreshed in 2019 to include some key new featur
 
 In this tutorial, you will create a feature-rich isoline routing visualization application.
 
-   ![Sample Image](/assets/car.jpeg)
+   ![Sample Image](https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)
    
 The template code is provided so you can focus on implementing the Maps API code instead of focusing on trivial details like CSS.
 
