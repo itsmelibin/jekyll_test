@@ -90,11 +90,11 @@ The function we've made, `requestIsolineShape()`, will return a promise that wil
         function drawChart() {
           var data = google.visualization.arrayToDataTable([
             ['Task', 'Hours per Day'],
-            ['Work',     11],
-            ['Eat',      2],
-            ['Commute',  2],
-            ['Watch TV', 2],
-            ['Sleep',    7]
+            ['Task1',     11],
+            ['Task2',      2],
+            ['Task3',  2],
+            ['Task4', 2],
+            ['Task5',    7]
           ]);
   
           var options = {
