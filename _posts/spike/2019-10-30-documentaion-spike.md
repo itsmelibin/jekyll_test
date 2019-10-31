@@ -3,20 +3,6 @@ title: "Maps"
 permalink: "/documentation_spike"
 ---
 
-<div class="navigation_menu">
-{% for entry in site.data.menu %}
-  <h2>{{ entry.title }}</h2>
-  {% for subcategory in entry.subcategories %}
-    <h3>{{ subcategory.title }}</h3>
-    <ul>
-    {% for item in subcategory.items %}
-      <li><a href="{{ item.href }}">{{ item.title }}</a></li>
-    {% endfor %}
-    </ul>
-  {% endfor %}
-{% endfor %}
-</div>
-
 ## Introduction
 
 This tutorial is a detailed introduction to the [Maps API for JavaScript 3.1](https://developer.here.com/documentation/maps/topics/quick-start.html).
@@ -72,6 +58,8 @@ When you download and unzip the template, you'll see the following file structur
  
 ## Initialize the platform and map {#initialize-map}
 
+   <iframe width="100%" height="300" src="//jsfiddle.net/itsmelibin/0nah92p7/embedded/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
 Let's get started by adding the Maps API for JavaScript imports.
 
 Inside of `index.html` add the following script imports to your document's `<head>`:
@@ -86,12 +74,43 @@ __index.html__
 <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
 <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
 ```
- 
+  
 We'll need to import the `router` from our main `app.js` file so it can be used here. 
 
 We create the function `requestIsolineShape` that will make the request to the HERE Routing API for us. The JavaScript API conveniently wraps this request for us with the `router.calculateIsoline()` option.
 
 The function we've made, `requestIsolineShape()`, will return a promise that will get resolved once the response from the HERE server is made. 
+
+ <html>
+    <head>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Work',     11],
+            ['Eat',      2],
+            ['Commute',  2],
+            ['Watch TV', 2],
+            ['Sleep',    7]
+          ]);
+  
+          var options = {
+            title: 'My Daily Activities',
+            is3D: true,
+          };
+  
+          var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+          chart.draw(data, options);
+        }
+      </script>
+    </head>
+    <body>
+      <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+    </body>
+  </html>
 
 We'll pass it a few different parameters, all of which will be configured by the application user from the sidebar UI.
 - __mode__: choice between `pedestrian`, `car`, or `truck`. This parameter will also contain the flag to enable traffic or not.
@@ -109,3 +128,4 @@ For more example on isoline routing, we have a few blog posts available on the t
 
 
    <iframe width="700" height="500" src="https://codepen.io/davidkpiano/pen/wMqXea" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   
