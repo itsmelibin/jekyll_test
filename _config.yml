@@ -22,7 +22,7 @@ title: New Features in Tutorial
 email: test@here.com
 description: >- # this means to ignore newlines until "baseurl:"
   Spike on diffrent features that can be integrated to tutorials.
-baseurl: "jekyll_test" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
@@ -31,6 +31,14 @@ github_username:  jekyll
 theme: minima
 plugins:
   - jekyll-feed
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+        layout: "page"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -1,9 +1,21 @@
 ---
-layout: "page"
 title: "Maps"
 permalink: "/documentation_spike"
-
 ---
+
+<div class="navigation_menu">
+{% for entry in site.data.menu %}
+  <h2>{{ entry.title }}</h2>
+  {% for subcategory in entry.subcategories %}
+    <h3>{{ subcategory.title }}</h3>
+    <ul>
+    {% for item in subcategory.items %}
+      <li><a href="{{ item.href }}">{{ item.title }}</a></li>
+    {% endfor %}
+    </ul>
+  {% endfor %}
+{% endfor %}
+</div>
 
 ## Introduction
 
