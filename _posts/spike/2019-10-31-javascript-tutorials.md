@@ -1,4 +1,7 @@
-
+---
+title: "Javascript Tutorials"
+permalink: "/javascript_tutorials"
+---
 ## Introduction
 <div style="text-align: right">Last Updated: 11/09/2019 JS Library Version: 3.1</div>
 
