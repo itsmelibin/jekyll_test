@@ -23,7 +23,7 @@ The Maps API for JavaScript was refreshed in 2019 to include some key new featur
 
 In this tutorial, you will create a feature-rich isoline routing visualization application.
 
-![screenshot of final app](../../assets/graphics/app.png)
+![screenshot of final app](./assets/graphics/app.png)
  
 You'll learn how to:
 - set up an interactive map with controls and events.
@@ -370,7 +370,7 @@ calculateIsoline();
 
 If you save the file and refresh your browser, you should now having a working isoline! Try dragging around the marker to see an isoline from a new location.
 
-![app with isoline](../../assets/graphics/isoline.png)
+![app with isoline](./assets/graphics/isoline.png)
 
 
 ## Create the bar chart {#create-the-bar-chart}
@@ -685,7 +685,7 @@ function calculateView() {
 
 Now whenever the *rotating angle* radio button is clicked, you'll get an effect like this:
 
-![rotating map](../../assets/graphics/rotation.png)
+![rotating map](./assets/graphics/rotation.png)
 
 ## Enable geocoding and autocomplete {#enable-geocoding}
 
