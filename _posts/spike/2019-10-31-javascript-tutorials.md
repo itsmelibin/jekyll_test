@@ -1,4 +1,5 @@
 ---
+layout: 'page'
 title: "Javascript Tutorials"
 permalink: "/javascript_tutorials"
 ---
